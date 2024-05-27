@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class Open_Close : MonoBehaviour
 {
-    [SerializeField] private Animator Animator;
+    [SerializeField] private Animator press_button;
+    [SerializeField] private Animator cap;
     // Update is called once per frame
-    private void Start()
-    {
-        Animator = GetComponent<Animator>();
-    }
     
-
-    private void OnMouseOver()
+    private void OnMouseUpAsButton()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Animator.SetTrigger("Active");
-        }
+        press_button.SetTrigger("Active");
+        cap.SetTrigger("Active");
+        
     }
 }
