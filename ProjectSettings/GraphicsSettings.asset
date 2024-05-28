@@ -49,7 +49,7 @@ GraphicsSettings:
       standardShaderQuality: 2
       renderingPath: 1
       hdrMode: 1
-      realtimeGICPUUsage: 100
+      realtimeGICPUUsage: 25
       useReflectionProbeBoxProjection: 1
       useReflectionProbeBlending: 1
       useHDR: 1
@@ -58,7 +58,7 @@ GraphicsSettings:
       prefer32BitShadowMaps: 0
       enableLPPV: 1
       useDitherMaskForAlphaBlendedShadows: 1
-    m_Automatic: 0
+    m_Automatic: 1
   - serializedVersion: 5
     m_BuildTarget: 13
     m_Tier: 1
@@ -66,7 +66,7 @@ GraphicsSettings:
       standardShaderQuality: 2
       renderingPath: 1
       hdrMode: 1
-      realtimeGICPUUsage: 100
+      realtimeGICPUUsage: 25
       useReflectionProbeBoxProjection: 1
       useReflectionProbeBlending: 1
       useHDR: 1
@@ -75,7 +75,7 @@ GraphicsSettings:
       prefer32BitShadowMaps: 0
       enableLPPV: 1
       useDitherMaskForAlphaBlendedShadows: 1
-    m_Automatic: 0
+    m_Automatic: 1
   - serializedVersion: 5
     m_BuildTarget: 13
     m_Tier: 2
@@ -83,8 +83,8 @@ GraphicsSettings:
       standardShaderQuality: 2
       renderingPath: 1
       hdrMode: 1
-      realtimeGICPUUsage: 100
-      useReflectionProbeBoxProjection: 1
+      realtimeGICPUUsage: 25
+      useReflectionProbeBoxProjection: 0
       useReflectionProbeBlending: 1
       useHDR: 1
       useDetailNormalMap: 1
@@ -92,7 +92,7 @@ GraphicsSettings:
       prefer32BitShadowMaps: 0
       enableLPPV: 1
       useDitherMaskForAlphaBlendedShadows: 1
-    m_Automatic: 0
+    m_Automatic: 1
   m_LightmapStripping: 0
   m_FogStripping: 0
   m_InstancingStripping: 0
@@ -113,5 +113,5 @@ GraphicsSettings:
   m_LogWhenShaderIsCompiled: 0
   m_SRPDefaultSettings: {}
   m_LightProbeOutsideHullStrategy: 0
-  m_CameraRelativeLightCulling: 1
-  m_CameraRelativeShadowCulling: 1
+  m_CameraRelativeLightCulling: 0
+  m_CameraRelativeShadowCulling: 0

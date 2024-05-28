@@ -10,6 +10,8 @@ Unity.Jobs.JobHandle::ScheduleBatchedJobsAndComplete
 Unity.Jobs.LowLevel.Unsafe.JobsUtility::GetWorkStealingRange
 Unity.Jobs.LowLevel.Unsafe.JobsUtility::CreateJobReflectionData
 Unity.Jobs.LowLevel.Unsafe.JobsUtility::ScheduleParallelFor_Injected
+Unity.Profiling.LowLevel.Unsafe.ProfilerRecorderHandle::GetByName__Unmanaged_Injected
+Unity.Profiling.LowLevel.Unsafe.ProfilerRecorderHandle::GetDescriptionInternal_Injected
 Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility::CreateMarker
 Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility::CreateMarker__Unmanaged
 Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility::CreateCategory__Unmanaged
@@ -18,6 +20,9 @@ Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility::EndSample
 Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility::GetCategoryDescription_Injected
 Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility::SetMarkerMetadata__Unmanaged
 Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility::CreateCounterValue__Unmanaged
+Unity.Profiling.ProfilerRecorder::GetValid_Injected
+Unity.Profiling.ProfilerRecorder::Control_Injected
+Unity.Profiling.ProfilerRecorder::Create_Injected
 UnityEngine.AnimationCurve::Internal_Equals
 UnityEngine.AnimationCurve::GetHashCode
 UnityEngine.AnimationCurve::Internal_Create
@@ -285,6 +290,7 @@ UnityEngine.Hash128::Parse_Injected
 UnityEngine.Input::CheckDisabled
 UnityEngine.Input::GetKeyDownInt
 UnityEngine.Input::GetKeyInt
+UnityEngine.Input::GetKeyUpInt
 UnityEngine.Input::GetMouseButton
 UnityEngine.Input::GetMouseButtonDown
 UnityEngine.Input::GetMouseButtonUp
@@ -303,7 +309,10 @@ UnityEngine.Input::set_compositionCursorPos_Injected
 UnityEngine.Input::set_imeCompositionMode
 UnityEngine.Input::set_simulateMouseWithTouches
 UnityEngine.Input::get_imeCompositionMode
+UnityEngine.IntegratedSubsystem::SetHandle
+UnityEngine.Internal.InputUnsafeUtility::GetButton
 UnityEngine.Internal.InputUnsafeUtility::GetButtonDown
+UnityEngine.Internal.InputUnsafeUtility::GetButtonUp
 UnityEngine.Internal.InputUnsafeUtility::GetButtonUp__Unmanaged
 UnityEngine.Internal.InputUnsafeUtility::GetButton__Unmanaged
 UnityEngine.Internal.InputUnsafeUtility::GetKeyDownString__Unmanaged
@@ -331,6 +340,7 @@ UnityEngine.Material::SetPass
 UnityEngine.Material::ComputeCRC
 UnityEngine.Material::GetFirstPropertyNameIdByAttribute
 UnityEngine.Material::get_passCount
+UnityEngine.Material::get_rawRenderQueue
 UnityEngine.Material::GetFloatImpl
 UnityEngine.Material::GetTagImpl
 UnityEngine.Material::GetShaderKeywords
@@ -403,11 +413,14 @@ UnityEngine.Object::GetName
 UnityEngine.Object::ToString
 UnityEngine.Object::Destroy
 UnityEngine.Object::DestroyImmediate
+UnityEngine.Object::DontDestroyOnLoad
 UnityEngine.Object::SetName
 UnityEngine.Object::set_hideFlags
 UnityEngine.Object::get_hideFlags
 UnityEngine.Object::FindObjectFromInstanceID
 UnityEngine.Object::Internal_CloneSingle
+UnityEngine.Object::Internal_CloneSingleWithParent
+UnityEngine.Object::FindObjectsOfType
 UnityEngine.ObjectGUIState::Internal_Create
 UnityEngine.ObjectGUIState::Internal_Destroy
 UnityEngine.Physics::get_invokeCollisionCallbacks
@@ -479,6 +492,7 @@ UnityEngine.Renderer::set_sortingOrder
 UnityEngine.Renderer::GetMaterial
 UnityEngine.Renderer::GetSharedMaterial
 UnityEngine.Rendering.GraphicsSettings::get_lightsUseLinearIntensity
+UnityEngine.Rendering.GraphicsSettings::get_INTERNAL_currentRenderPipeline
 UnityEngine.Rendering.ScriptableRenderContext::GetCameras_Internal_Injected
 UnityEngine.Rendering.SortingGroup::get_invalidSortingGroupID
 UnityEngine.Rendering.SortingGroup::get_sortingLayerID
@@ -508,6 +522,7 @@ UnityEngine.Screen::get_fullScreen
 UnityEngine.Screen::get_height
 UnityEngine.Screen::get_width
 UnityEngine.Screen::get_dpi
+UnityEngine.Screen::GetScreenOrientation
 UnityEngine.ScriptableObject::CreateScriptableObject
 UnityEngine.ScriptableObject::CreateScriptableObjectInstanceFromType
 UnityEngine.ScriptingRuntime::GetAllUserAssemblies
@@ -529,6 +544,9 @@ UnityEngine.Sprite::get_associatedAlphaSplitTexture
 UnityEngine.Sprite::get_texture
 UnityEngine.Sprite::get_uv
 UnityEngine.Sprite::get_vertices
+UnityEngine.SubsystemDescriptorBindings::GetId
+UnityEngine.SubsystemManager::StaticConstructScriptingClassMap
+UnityEngine.SubsystemsImplementation.SubsystemDescriptorStore::ReportSingleSubsystemAnalytics
 UnityEngine.SystemInfo::IsFormatSupported
 UnityEngine.SystemInfo::SupportsTextureFormatNative
 UnityEngine.SystemInfo::GetMaxRenderTextureSize
@@ -679,6 +697,10 @@ UnityEngine.UIElements.UIR.Utility::WaitForCPUFencePassed
 UnityEngine.UISystemProfilerApi::AddMarker
 UnityEngine.UISystemProfilerApi::BeginSample
 UnityEngine.UISystemProfilerApi::EndSample
+UnityEngine.XR.XRDisplaySubsystem::set_disableLegacyRenderer
+UnityEngine.XR.XRDisplaySubsystem::set_sRGB
+UnityEngine.XR.XRDisplaySubsystem::set_textureLayout
+UnityEngine.XR.XRMeshSubsystem/MeshTransformList::Dispose
 UnityEngine.Yoga.Native::YGConfigGetUseWebDefaults
 UnityEngine.Yoga.Native::YGNodeGetHasNewLayout
 UnityEngine.Yoga.Native::YGNodeIsDirty
@@ -746,3 +768,4 @@ UnityEngine.Yoga.Native::YGNodeStyleSetWidthAuto
 UnityEngine.Yoga.Native::YGNodeStyleSetWidthPercent
 UnityEngine.Yoga.Native::YGSetManagedObject
 UnityEngine.Yoga.Native::YGNodeStyleGetDirection
+UnityEngineInternal.Input.NativeInputSystem::set_hasDeviceDiscoveredCallback
